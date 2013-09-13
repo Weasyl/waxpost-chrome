@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+
+  "name": "Waxpost (Weasyl Crossposter)",
+  "description": "This extension adds a 'Crosspost to Weasyl' button to the art site FurAffinity.",
+  "version": "0.1",
+
+  "background": { "scripts": ["background.js"] },
+  "content_scripts": [{
+      "js": ["jquery-2.0.3.min.js", "jquery-blob.js"],
+      "matches": [
+          "https://*.furaffinity.net/view/*",
+      ]
+  }],
+  "web_accessible_resources": ["jquery-2.0.3.min.map"],
+  "options_page": "options.html",
+  "icons": {
+    "48": "icon-48.png",
+    "128": "icon-48.png"
+  },
+  "page_action":
+  {
+    "default_icon" : "icon-38.png",
+    "default_title" : "Crosspost to Weasyl"
+  },
+  "permissions": [
+    "https://*.furaffinity.net/",
+    "https://*.weasyl.com/",
+    "tabs"
+  ]
+}

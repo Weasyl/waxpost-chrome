@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="chrome-bootstrap.css" />
+<body class="chrome-bootstrap">
+  <div class="frame">
+    <div class="mainview view">
+      <div class="selected">
+        <header><h1>Waxpost settings</h1>
+        <h2>Weasyl API key</h2>
+        <p>
+          An API key from <a href="https://www.weasyl.com/control/apikeys">
+          Weasyl's API key management system</a>.
+        </p>
+        <section>
+          <input type="password" id="apikey" size="48" />
+        </section>
+        <h2>Weasyl Root</h2>
+        <p>You probably don't need to change this. Mostly for testing.</p>
+        <section>
+          <input type="text" id="wzlroot" value="https://www.weasyl.com/" size="20" />
+        </section>
+        <div class="controls">
+          <div class="spacer" />
+          <button id="save-button">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
