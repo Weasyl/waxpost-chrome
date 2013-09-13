@@ -3,6 +3,7 @@ localStorage['waxpost-wzlroot'] = localStorage['waxpost-wzlroot'] || 'https://ww
 var tabScripts = {};
 var tabScriptRegexps = [
     [/^https?:\/\/(?:[^.]+\.)?deviantart.com\/art\//, 'deviantart.js'],
+    [/^https?:\/\/www.sofurry.com\/view\//, 'sofurry.js'],
     [/^https?:\/\/(?:[^.]+\.)?furaffinity.net\/view\//, 'furaffinity.js'],
     [/^https?:\/\/inkbunny.net\/submissionview.php/, 'inkbunny.js'],
 ];

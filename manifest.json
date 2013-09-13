@@ -11,6 +11,8 @@
       "matches": [
           "https://*.deviantart.com/art/*",
           "http://*.deviantart.com/art/*",
+          "https://www.sofurry.com/view/*",
+          "http://www.sofurry.com/view/*",
           "https://*.furaffinity.net/view/*",
           "http://*.furaffinity.net/view/*",
           "https://inkbunny.net/*"
@@ -30,6 +32,8 @@
   "permissions": [
     "http://*.deviantart.com/art/*",
     "https://*.deviantart.com/art/*",
+    "https://www.sofurry.com/view/*",
+    "http://www.sofurry.com/view/*",
     "http://*.furaffinity.net/view/*",
     "https://*.furaffinity.net/view/*",
     "https://inkbunny.net/submissionview.php",
