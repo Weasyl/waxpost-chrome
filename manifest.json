@@ -26,8 +26,8 @@
     "default_title" : "Crosspost to Weasyl"
   },
   "permissions": [
-    "http://*.furaffinity.net/",
-    "https://*.furaffinity.net/",
+    "http://*.furaffinity.net/view/*",
+    "https://*.furaffinity.net/view/*",
     "https://inkbunny.net/submissionview.php",
     "tabs"
   ]
