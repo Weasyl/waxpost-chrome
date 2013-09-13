@@ -9,6 +9,8 @@
   "content_scripts": [{
       "js": ["jquery-2.0.3.min.js"],
       "matches": [
+          "https://*.deviantart.com/art/*",
+          "http://*.deviantart.com/art/*",
           "https://*.furaffinity.net/view/*",
           "http://*.furaffinity.net/view/*",
           "https://inkbunny.net/*"
@@ -26,6 +28,8 @@
     "default_title" : "Crosspost to Weasyl"
   },
   "permissions": [
+    "http://*.deviantart.com/art/*",
+    "https://*.deviantart.com/art/*",
     "http://*.furaffinity.net/view/*",
     "https://*.furaffinity.net/view/*",
     "https://inkbunny.net/submissionview.php",
