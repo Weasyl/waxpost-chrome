@@ -1,6 +1,7 @@
 $(function ($) {
     var title = $('table.maintable table.maintable td.cat b').get(0).innerText;
-    var tags = $.map($('#keywords a').get(), function (x) { return x.innerText.replace(' ', '_'); });
+    var tags = $.map($('#keywords a').get(),
+                     function (x) { return x.innerText.replace(/ /g, '_'); });
     var description = $('table.maintable td.alt1[width="70%"]').text();
     var imageURL = $('a:contains("Download")').attr('href');
     chrome.runtime.sendMessage({method: 'getSettings'}, function (response) {

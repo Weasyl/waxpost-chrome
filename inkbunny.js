@@ -1,7 +1,8 @@
 $(function ($) {
     var title = $('div.content td:nth-child(2) div', $('div.elephant').get(2)).get(0).innerText;
     var tags = $('div div:nth-child(1) a span', $('#kw_scroll').next());
-    var tags = $.map(tags.get(), function (x) { return x.innerText.replace(' ', '_'); });
+    var tags = $.map(tags.get(),
+                     function (x) { return x.innerText.replace(/ /g, '_'); });
     var description = $('div.elephant_bottom.elephant_white div.content div').get(0).innerText;
     var image = $('div.widget_imageFromSubmission img').eq(0);
     var imageLink = image.parent('a');
