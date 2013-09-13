@@ -7,7 +7,7 @@
 
   "background": { "scripts": ["background.js"] },
   "content_scripts": [{
-      "js": ["jquery-2.0.3.min.js", "jquery-blob.js"],
+      "js": ["jquery-2.0.3.min.js"],
       "matches": [
           "https://*.furaffinity.net/view/*",
           "http://*.furaffinity.net/view/*",
