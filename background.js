@@ -22,6 +22,10 @@ chrome.tabs.onUpdated.addListener(function (tabID, changeInfo, tab) {
         chrome.pageAction.show(tabID);
 });
 
+chrome.tabs.onRemoved.addListener(function (tabID, removeInfo) {
+    delete tabScripts[tabID];
+});
+
 chrome.pageAction.onClicked.addListener(function (tab) {
     chrome.tabs.executeScript(tab.id, {file: tabScripts[tab.id]});
 });
@@ -29,6 +33,11 @@ chrome.pageAction.onClicked.addListener(function (tab) {
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     if (request.method == 'getSettings')
         sendResponse({settings: localStorage});
-    else
+    else if (request.method == 'openTab') {
+        request.properties.windowId = sender.tab.windowId;
+        request.properties.openerTabId = sender.tab.id;
+        request.properties.index = sender.tab.index + 1;
+        chrome.tabs.create(request.properties);
+    } else
         sendResponse({});
 });
