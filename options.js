@@ -1,4 +1,4 @@
-var allSettings = ['apikey', 'wzlroot'];
+var allSettings = ['wzlroot'];
 
 document.addEventListener('DOMContentLoaded', function () {
     allSettings.forEach(function (setting) {
