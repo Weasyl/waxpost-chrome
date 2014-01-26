@@ -17,8 +17,9 @@ chrome.tabs.onUpdated.addListener(function (tabID, changeInfo, tab) {
         }
         return true;
     });
-    if (!foundNoMatch)
-        chrome.pageAction.show(tabID);
+    if (!foundNoMatch) {
+        chrome.tabs.executeScript(tabID, {file: 'prepare.js'});
+    }
 });
 
 chrome.tabs.onRemoved.addListener(function (tabID, removeInfo) {
@@ -37,6 +38,8 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         request.properties.openerTabId = sender.tab.id;
         request.properties.index = sender.tab.index + 1;
         chrome.tabs.create(request.properties);
+    } else if (request.method == 'showButton') {
+        chrome.pageAction.show(sender.tab.id);
     } else
         sendResponse({});
 });
