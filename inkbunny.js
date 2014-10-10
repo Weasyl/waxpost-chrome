@@ -1,4 +1,4 @@
-$(function ($) {
+$waxpost.query(function ($) {
     var titlePos = $('div.welcomeanon_userdetails').length ? 2 : 1; //check user login state
     var title = $('div.content td:nth-child(2) div', $('div.elephant').get(titlePos)).get(0).innerText;
     var tags = $('div div:nth-child(1) a span', $('#kw_scroll').next());

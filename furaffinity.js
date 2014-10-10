@@ -1,4 +1,4 @@
-$(function ($) {
+$waxpost.query(function ($) {
     var title = $('table.maintable table.maintable td.cat b').get(0).innerText;
     var tags = $.map($('#keywords a').get(),
                      function (x) { return x.innerText.replace(/ /g, '_'); });

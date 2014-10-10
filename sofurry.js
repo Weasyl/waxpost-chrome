@@ -1,4 +1,4 @@
-$(function ($) {
+$waxpost.query(function ($) {
     var title = $('#sfContentTitle').get(0).innerText;
     var tagContainers = $('#submission_tags div.section-content');
     var tags = $.map($('a', tagContainers.get(0)).get(),
