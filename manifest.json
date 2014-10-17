@@ -4,7 +4,7 @@
   "name": "Waxpost (Weasyl Crossposter)",
   "short_name": "Waxpost",
   "description": "This extension adds a 'Crosspost to Weasyl' button to various art sites.",
-  "version": "0.1.3",
+  "version": "0.1.4",
 
   "background": { "scripts": ["background.js"] },
   "content_scripts": [{
