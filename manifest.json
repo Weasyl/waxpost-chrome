@@ -9,6 +9,7 @@
   "background": { "scripts": ["background.js"] },
   "content_scripts": [{
       "js": ["jquery-2.0.3.min.js"],
+      "run_at": "document_start",
       "matches": [
           "https://*.deviantart.com/art/*",
           "http://*.deviantart.com/art/*",
