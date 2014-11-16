@@ -6,6 +6,7 @@ var tabScriptRegexps = [
     [/^https?:\/\/www\.sofurry\.com\/view\//, 'sofurry.js'],
     [/^https?:\/\/(?:[^.]+\.)?furaffinity\.net\/view\//, 'furaffinity.js'],
     [/^https?:\/\/inkbunny\.net\/submissionview\.php/, 'inkbunny.js'],
+    [/^https?:\/\/i\.imgur\.com\//, 'imgur.js'],
 ];
 
 chrome.tabs.onUpdated.addListener(function (tabID, changeInfo, tab) {

@@ -17,7 +17,9 @@
           "http://www.sofurry.com/view/*",
           "https://*.furaffinity.net/view/*",
           "http://*.furaffinity.net/view/*",
-          "https://inkbunny.net/*"
+          "https://inkbunny.net/*",
+          "https://i.imgur.com/*",
+          "http://i.imgur.com/*"
       ]
   }],
   "web_accessible_resources": ["jquery-2.0.3.min.map"],
@@ -39,6 +41,8 @@
     "http://*.furaffinity.net/view/*",
     "https://*.furaffinity.net/view/*",
     "https://inkbunny.net/submissionview.php",
+    "https://i.imgur.com/*",
+    "http://i.imgur.com/*",
     "tabs"
   ]
 }
