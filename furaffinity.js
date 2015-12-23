@@ -1,6 +1,6 @@
 $waxpost.query(function ($) {
     var title, tags, description, imageURL;
-    if (document.getElementById('submission-details') == null) {
+    if (document.getElementById('submission_page') == null) {
         //using classic theme
         title = $('table.maintable table.maintable td.cat b');
         title = title.get(title.length-1).innerText;
@@ -9,8 +9,8 @@ $waxpost.query(function ($) {
         description = $('table.maintable td.alt1[width="70%"]').text();
     } else {
         //using beta theme
-        title = $('#submission-details div.desc-col span.fontsize20 b').get(0).innerText;
-        description = $('#submission-details div.desc').text();
+        title = document.querySelector('div.submissiontitlecontent').innerText;
+        description = document.querySelector('#submission_page div.bg1 div.bg3.p20.hideonmobile').innerText;
         tags = Array.prototype.map.call(document.getElementsByClassName('tags'), 
             function(tag) {
                 return tag.getElementsByTagName('a')[0].innerText;
