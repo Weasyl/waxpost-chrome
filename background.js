@@ -36,7 +36,6 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         sendResponse({settings: localStorage});
     else if (request.method == 'openTab') {
         request.properties.windowId = sender.tab.windowId;
-        request.properties.openerTabId = sender.tab.id;
         request.properties.index = sender.tab.index + 1;
         chrome.tabs.create(request.properties);
     } else if (request.method == 'showButton') {
