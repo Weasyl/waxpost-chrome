@@ -1,4 +1,10 @@
 {
+  "applications": {
+    "gecko": {
+      "id": "Waxposter@weasyl.com"
+    }
+  },
+  
   "manifest_version": 2,
 
   "name": "Waxpost (Weasyl Crossposter)",
