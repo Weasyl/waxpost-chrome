@@ -9,8 +9,8 @@ $waxpost.query(function ($) {
         description = $('table.maintable td.alt1[width="70%"]').text();
     } else {
         //using beta theme
-        title = document.querySelector('div.submissiontitlecontent').innerText;
-        description = document.querySelector('#submission_page div.bg1 div.bg3.p20.hideonmobile').innerText;
+        title = document.querySelector('div.submission-title').firstChild.textContent;
+        description = document.querySelector('#submission_page div.bg1 div.bg3 div.p20').innerText;
         tags = Array.prototype.map.call(document.getElementsByClassName('tags'), 
             function(tag) {
                 return tag.getElementsByTagName('a')[0].innerText;
